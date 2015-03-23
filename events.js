@@ -48,7 +48,8 @@ function getInfo() {
         //}
     }
     text = "https://www.eventbriteapi.com/v3/events/search/?categories=" + (199).toString();
-    text += "&token=RGS7WFGW7C7B645ARO7N";
+    //token is the Eventbrite API token you must log in and ask for developer permissions to get your own
+    text += "&" + token;
     $.getJSON(text, handleData(i));
 }
 
