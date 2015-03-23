@@ -28,7 +28,6 @@ function getInfo() {
     var handleData = function(num) {
         return function(data) {
             categoryInfos[num - 1] = data.pagination.object_count;
-            console.log(data);
             count += 1
             if (count == 20) {
                 createCoolGraph(data);
@@ -90,7 +89,6 @@ function createCoolGraph(data) {
         .selectAll("g").data(packCalculations).enter()
     var g = svg.append("g")
     g.on("mouseover", function(d, i) {
-        console.log(d);
         tooltip.text(d.numEvents + " events")
             .attr("fill", "black")
             .style("background", rgbaColors[i%5])
@@ -127,6 +125,5 @@ function createJSON(data, categoryMappings) {
             viewsJSONString += ",";
     }
     viewsJSONString += "]}"
-    console.log(viewsJSONString);
     return JSON.parse(viewsJSONString);
 }
