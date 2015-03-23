@@ -1,0 +1,33 @@
+text {
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+}
+.tooltip{
+    border: 1px solid black;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    width: 90px;
+    padding: 6px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.tooltip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: -100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25C0";
+    position: absolute;
+    left: -9px;
+    top: 11px;
+    text-align: center;
+}
+.circle:hover {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+}
